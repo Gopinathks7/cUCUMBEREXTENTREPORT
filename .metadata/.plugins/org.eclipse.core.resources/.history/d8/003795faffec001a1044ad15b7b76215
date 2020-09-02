@@ -1,0 +1,64 @@
+package com.report;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class openGoogleSearch
+{
+
+	@Given("^Open Google Browser$")
+	public void open_Google_Browser() 
+	{
+	  try
+	  {
+		  
+	  }
+	  catch(Exception e)
+	  {
+		  e.printStackTrace();
+	  }
+	}
+
+	@When("^Enter an content in the google saerch box \"([^\"]*)\" in step$")
+	public void enter_an_content_in_the_google_saerch_box_in_step(String content)  
+	{
+	 
+		  try
+		  {
+			  
+		  }
+		  catch(Exception e)
+		  {
+			  e.printStackTrace();
+		  }
+	}
+
+	@When("^click on the search button$")
+	public void click_on_the_search_button()  
+	{
+		  try
+		  {
+			  
+		  }
+		  catch(Exception e)
+		  {
+			  e.printStackTrace();
+		  }
+	}
+
+	@Then("^Google should display search result$")
+	public void google_should_display_search_result() 
+	{
+		  try
+		  {
+			  
+		  }
+		  catch(Exception e)
+		  {
+			  e.printStackTrace();
+		  }
+	}
+
+	
+}

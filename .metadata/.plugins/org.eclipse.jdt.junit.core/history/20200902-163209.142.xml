@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="MYREPORT" tests="4" started="4" failures="0" errors="1" ignored="0">
+  <testsuite name="com.report.Runner" time="1.893" incomplete="true">
+    <error>java.lang.NullPointerException&#13;
+	at com.aventstack.extentreports.reporter.AbstractReporter.loadXMLConfig(AbstractReporter.java:65)&#13;
+	at com.cucumber.listener.Reporter.loadXMLConfig(Reporter.java:56)&#13;
+	at com.report.Runner.writeExtentReport(Runner.java:35)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)&#13;
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+&#13;
+</error>
+    <testsuite name="Feature: Google Search" time="1.893">
+      <testsuite name="Scenario Outline: Search Content using Google" time="1.893">
+        <testsuite name="Examples:" time="1.893">
+          <testsuite name="| selenium |" time="1.893">
+            <testcase name="Given Open Google Browser" classname="| selenium |" time="0.464"/>
+            <testcase name="When Enter an content in the google saerch box &quot;selenium&quot; in step" classname="| selenium |" time="0.003"/>
+            <testcase name="And click on the search button" classname="| selenium |" time="0.003"/>
+            <testcase name="Then Google should display search result" classname="| selenium |" time="1.423"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
