@@ -1,0 +1,90 @@
+package com.report;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Hokandbeckend 
+{
+	String path="E:\\data.xlsx";
+	 WebDriver driver;
+	
+		String username=Excel.getCellValue(path, "Sheet1", 1, 0);
+		String password=Excel.getCellValue(path, "Sheet1", 2, 0);
+	
+	@Before
+	public void launchBrowser()
+	{
+		
+	}
+
+
+@Given("^Open Login page$")
+public void open_Login_page()  
+{
+
+	String key="webdriver.chrome.driver";
+	String value="E:\\BrowserDrivers\\common\\chromedriver.exe";
+	System.setProperty(key, value);
+	driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.get("http://automationpractice.com/index.php");
+	String xpath=".//a[@class='login']";
+    WebElement login=driver.findElement(By.xpath(xpath));
+    login.click();
+}
+
+@When("^Enter valid usename$")
+public void enter_valid_usename()  
+{
+	 			String xpath1=".//input[@id='email']";
+			    WebElement user=driver.findElement(By.xpath(xpath1));
+			    user.sendKeys(username);
+		  
+}
+
+@When("^Enter valid password and click on submit button$")
+public void enter_valid_password_and_click_on_submit_button()  
+{
+    String xpath2=".//input[@id='passwd']";
+    WebElement pass = driver.findElement(By.xpath(xpath2));
+    pass.sendKeys(password);
+}
+
+@Then("^Login should sucess$")
+public void login_should_sucess() 
+{
+	 String submit=".//button[@id='SubmitLogin']";
+	    WebElement submitbutton=driver.findElement(By.xpath(submit));
+	    submitbutton.click();
+}
+
+@Given("^Home page of the Email$")
+public void home_page_of_the_Email() 
+{
+   System.out.println("Home page");
+}
+
+@When("^Click on the Inbox link$")
+public void click_on_the_Inbox_link() {
+    
+}
+
+@Then("^Inbox should display all the mails$")
+public void inbox_should_display_all_the_mails()  {
+    
+}
+
+
+}

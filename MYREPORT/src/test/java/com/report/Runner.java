@@ -16,9 +16,13 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
+/*@CucumberOptions(plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+features = {".//feature/openGoogleBrowser.feature"},*/
 @CucumberOptions(plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-features = {".//feature/openGoogleBrowser.feature"},
+features = {".//feature/HookandBackground.feature"},
+dryRun = false,
 monochrome = true)
+
 public class Runner
 {
 	@BeforeClass
@@ -33,11 +37,12 @@ public class Runner
    public static void writeExtentReport() {
 
     	Reporter.loadXMLConfig(new File("E:\\CucumberExtentReport\\MYREPORT\\src\\test\\java\\com\\report\\extent-config.xml"));
-    	Reporter.setSystemInfo("User Name", "AJ");
-    	Reporter.setSystemInfo("Application Name", "Test App ");
+    	Reporter.setSystemInfo("User Name", "Gopinath Kumsi");
+    	Reporter.setSystemInfo("Application Name", "MYREPORT ");
     	Reporter.setSystemInfo("Operating System Type", System.getProperty("os.name").toString());
-    	Reporter.setSystemInfo("Environment", "Production");
+    	Reporter.setSystemInfo("Environment", "Home");
     	Reporter.setTestRunnerOutput("Test Execution Cucumber Report");
+    	Reporter.addScenarioLog("Scenario Log message goes here");
       }
     	
     		

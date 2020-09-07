@@ -1,3 +1,6 @@
 com\report\ConfigFileReader.class
+com\report\Hokandbeckend.class
 com\report\openGoogleSearch.class
+com\report\Test.class
 com\report\Runner.class
+com\report\Excel.class

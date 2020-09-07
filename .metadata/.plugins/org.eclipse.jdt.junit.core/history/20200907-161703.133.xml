@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="MYREPORT" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.report.Runner" time="1.714">
+    <testsuite name="Feature: Google Search" time="1.714">
+      <testsuite name="Scenario Outline: Search Content using Google" time="1.714">
+        <testsuite name="Examples:" time="1.714">
+          <testsuite name="| selenium |" time="1.714">
+            <testcase name="Given Open Google Browser" classname="| selenium |" time="0.046"/>
+            <testcase name="When Enter an content in the google saerch box &quot;selenium&quot; in step" classname="| selenium |" time="0.007"/>
+            <testcase name="And click on the search button" classname="| selenium |" time="0.015"/>
+            <testcase name="Then Google should display search result" classname="| selenium |" time="1.646"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Sep 2, 2020 05:20:13 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Sep 7, 2020 05:42:50 PM</span>
 				</a>
 			</li>
 			<li>
@@ -91,6 +91,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@tag</a></li>
+					<li><a href='#'>@tag1</a></li>
 					<li><a href='#'>@tag2</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -154,7 +155,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -169,7 +170,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>14</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -188,46 +189,144 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Google Search</span>
-						<span class='test-time'>Sep 2, 2020 05:20:13 PM</span>
+						<span class='test-name'>Login into Application</span>
+						<span class='test-time'>Sep 7, 2020 05:42:50 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 31s+764ms</span>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@tag1</span>
+	</div>
+	<span class='duration right label'>0h 0m 56s+899ms</span>
 	<div class='desc'>
-		<b>ScenarioOutline</b>
-		<span class="desc-text">Search Content using Google</span>
+		<b>Scenario</b>
+		<span class="desc-text">Check Mails</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class='category-list'>
-				<span class='category label white-text'>@tag</span>
-				<span class='category label white-text'>@tag2</span>
-			</div>
+		<li test-id='3' class='node given pass' status='pass'>
 			
-			<b>Scenario</b>
+			<b>Given</b>
 			
-			<span class="bdd-step-name">Search Content using Google</span>
+			<span class="bdd-step-name">Given Open Login page</span>
+				<div class='pre'>passed</div>
 			
-				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given Open Google Browser</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When Enter an content in the google saerch box "selenium" in step</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And click on the search button</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='7' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then Google should display search result</span>
-							<div class='pre'>passed</div>
-					</li>
-				</ul>
+		</li>
+		<li test-id='4' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Enter valid usename</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Enter valid password and click on submit button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='6' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Login should sucess</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='7' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Home page of the Email</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='8' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Click on the Inbox link</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='9' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Inbox should display all the mails</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='10' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@tag2</span>
+	</div>
+	<span class='duration right label'>0h 0m 47s+443ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Simple</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='11' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Open Login page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='12' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Enter valid usename</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='13' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Enter valid password and click on submit button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='14' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Login should sucess</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='15' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Simple Testing the Background</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='16' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Nothing Clicked</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='17' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Nothing should happen</span>
+				<div class='pre'>passed</div>
+			
 		</li>
 	</ul>
 </div>
@@ -287,12 +386,12 @@
 					<div class='category-heading'>
 						<span class='category-name'>@tag</span>
 						<span class='category-status right'>
-							<span class='label pass'>2</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 2</span>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
 						</div>
@@ -308,13 +407,42 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 2, 2020 05:20:13 PM</td>
-										<td class='linked' test-id='1'>Google Search</td>
+										<td>Sep 7, 2020 05:42:50 PM</td>
+										<td class='linked' test-id='1'>Login into Application</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag1</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
 									<tr>
-										<td>Sep 2, 2020 05:20:13 PM</td>
-										<td class='linked' test-id='3'>Google Search.Search Content using Google.Search Content using Google</td>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 7, 2020 05:42:50 PM</td>
+										<td class='linked' test-id='2'>Login into Application.Check Mails</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -347,8 +475,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 2, 2020 05:20:13 PM</td>
-										<td class='linked' test-id='3'>Google Search.Search Content using Google.Search Content using Google</td>
+										<td>Sep 7, 2020 05:43:49 PM</td>
+										<td class='linked' test-id='10'>Login into Application.Simple</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -383,31 +511,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>14</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 2, 2020 05:20:13 PM</div>
+					<div class='panel-lead'>Sep 7, 2020 05:42:50 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 2, 2020 05:20:45 PM</div>
+			 		<div class='panel-lead'>Sep 7, 2020 05:44:37 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>32,515ms</div>
+					<div class='panel-lead'>107,355ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -421,11 +549,11 @@
 						</tr>
 							<tr>
 								<td>User Name</td>
-								<td>AJ</td>
+								<td>Gopinath Kumsi</td>
 							</tr>
 							<tr>
 								<td>Application Name</td>
-								<td>Test App </td>
+								<td>MYREPORT </td>
 							</tr>
 							<tr>
 								<td>Operating System Type</td>
@@ -433,7 +561,7 @@
 							</tr>
 							<tr>
 								<td>Environment</td>
-								<td>Production</td>
+								<td>Home</td>
 							</tr>
 					</table>
 				</div>
@@ -451,7 +579,13 @@
 						</tr>
 						<tr>
 							<td>@tag</td>
-							<td>2</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@tag1</td>
+							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 						</tr>
@@ -491,7 +625,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -500,7 +634,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 4,
+				passGrandChild: 14,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

@@ -1,0 +1,26 @@
+package com.report;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BasePage
+{
+public WebDriver driver;
+	public  BasePage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
+	public void openBrowser()
+	{
+		 String key="webdriver.chrome.driver";
+			String value="E:\\BrowserDrivers\\common\\chromedriver.exe";
+			System.setProperty(key, value);
+			 WebDriver driver= new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get("https://www.google.com/");;
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+}

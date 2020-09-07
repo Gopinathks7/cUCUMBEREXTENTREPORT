@@ -1,20 +1,27 @@
 package com.report;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class openGoogleSearch
+public class openGoogleSearch 
 {	
-	WebDriver driver;
 
+
+	
+
+	WebDriver driver;
+String title="";
 	@Given("^Open Google Browser$")
 	public void open_Google_Browser() 
 	{
@@ -23,18 +30,20 @@ public class openGoogleSearch
 		  String key="webdriver.chrome.driver";
 			String value="E:\\BrowserDrivers\\common\\chromedriver.exe";
 			System.setProperty(key, value);
-			 driver= new ChromeDriver();
+	ChromeOptions option=new ChromeOptions();
+	driver=new ChromeDriver(option);
 			driver.manage().window().maximize();
 			driver.get("https://www.google.com/");;
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	  }
+	}
+	  
 	  catch(Exception e)
 	  {
 		  e.printStackTrace();
 	  }
+	
 	}
-
 	@When("^Enter an content in the google saerch box \"([^\"]*)\" in step$")
 	public void enter_an_content_in_the_google_saerch_box_in_step(String content)  
 	{
@@ -43,6 +52,10 @@ public class openGoogleSearch
 		  {
 			  WebElement search=driver.findElement(By.name("q"));
 			  search.sendKeys(content);
+			  String xpath=".//span[contains(text(),'selenium')]";
+			  List<WebElement>all=driver.findElements(By.xpath(xpath));
+			  int count=all.size();
+			  all.get(count-2).click();
 		  }
 		  catch(Exception e)
 		  {
@@ -53,9 +66,9 @@ public class openGoogleSearch
 	@When("^click on the search button$")
 	public void click_on_the_search_button()  
 	{
+		
 		  try
-		  {
-			  System.out.println("Search button is clicked");
+		  {System.out.println("Clicked on Search button");
 		  }
 		  catch(Exception e)
 		  {

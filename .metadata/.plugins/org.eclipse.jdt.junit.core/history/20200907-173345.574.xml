@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="MYREPORT" tests="14" started="14" failures="0" errors="0" ignored="0">
+  <testsuite name="com.report.Runner" time="58.458">
+    <testsuite name="Feature: Login into Application" time="58.458">
+      <testsuite name="Scenario: Check Mails" time="19.67">
+        <testcase name="Given Open Login page" classname="Scenario: Check Mails" time="0.59"/>
+        <testcase name="When Enter valid usename" classname="Scenario: Check Mails" time="0.3"/>
+        <testcase name="And Enter valid password and click on submit button" classname="Scenario: Check Mails" time="10.314"/>
+        <testcase name="Then Login should sucess" classname="Scenario: Check Mails" time="0.085"/>
+        <testcase name="Given Home page of the Email" classname="Scenario: Check Mails" time="6.889"/>
+        <testcase name="When Click on the Inbox link" classname="Scenario: Check Mails" time="0.003"/>
+        <testcase name="Then Inbox should display all the mails" classname="Scenario: Check Mails" time="1.488"/>
+      </testsuite>
+      <testsuite name="Scenario: Simple" time="9.916">
+        <testcase name="Given Open Login page" classname="Scenario: Simple" time="1.983"/>
+        <testcase name="When Enter valid usename" classname="Scenario: Simple" time="0.281"/>
+        <testcase name="And Enter valid password and click on submit button" classname="Scenario: Simple" time="5.118"/>
+        <testcase name="Then Login should sucess" classname="Scenario: Simple" time="0.023"/>
+        <testcase name="Given Simple Testing the Background" classname="Scenario: Simple" time="0.014"/>
+        <testcase name="When Nothing Clicked" classname="Scenario: Simple" time="0.0"/>
+        <testcase name="Then Nothing should happen" classname="Scenario: Simple" time="2.497"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

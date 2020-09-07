@@ -23,6 +23,11 @@
 			<version>3.1.0</version>
 		</dependency>
 		
+		<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+  <version>3.1.0</version>
+</dependency> 
 		
 		<dependency>
     <groupId>com.relevantcodes</groupId>
@@ -45,12 +50,6 @@
 			<version>1.2.5</version>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.10</version>
-			<scope>test</scope>
-			</dependency>
 		
 		<dependency>
     		<groupId>com.google.guava</groupId>
@@ -69,6 +68,13 @@
     <groupId>com.vimalselvam</groupId>
     <artifactId>cucumber-extentsreport</artifactId>
     <version>3.0.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.9</version>
 </dependency>
 
 <dependency>
@@ -91,6 +97,8 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		
   </dependencies>
   
   <build>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="MYREPORT" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="com.report.Runner" time="7.189">
+    <testsuite name="Feature: Login into Application" time="7.189">
+      <testsuite name="Scenario: Check Mails" time="7.189">
+        <testcase name="Given Open Login page" classname="Scenario: Check Mails" time="3.836"/>
+        <testcase name="When Enter valid usename" classname="Scenario: Check Mails" time="0.305"/>
+        <testcase name="And Enter valid password and click on submit button" classname="Scenario: Check Mails" time="1.759"/>
+        <testcase name="Then Login should sucess" classname="Scenario: Check Mails" time="0.003"/>
+        <testcase name="Given Home page of the Email" classname="Scenario: Check Mails" time="0.007"/>
+        <testcase name="When Click on the Inbox link" classname="Scenario: Check Mails" time="0.0"/>
+        <testcase name="Then Inbox should display all the mails" classname="Scenario: Check Mails" time="1.279"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
